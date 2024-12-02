@@ -1,3 +1,5 @@
+![Cloud Computing Image](/img/banner-image.png)
+
 # Cloud Sandbox
 
 > Development environment for experimentation & testing.   
