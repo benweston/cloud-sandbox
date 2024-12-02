@@ -9,5 +9,4 @@ resource "google_project_service" "enable_apis" {
 
   service                    = each.key
   disable_dependent_services = true
-
 }

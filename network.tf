@@ -1,7 +1,6 @@
 resource "google_compute_network" "sandbox_vpc" {
   name                    = "demo-public-vpc"
   auto_create_subnetworks = false
-
 }
 
 resource "google_compute_subnetwork" "sandbox_subnet" {
@@ -9,7 +8,6 @@ resource "google_compute_subnetwork" "sandbox_subnet" {
   ip_cidr_range = var.ip_cidr_range
   region        = var.region
   network       = google_compute_network.sandbox_vpc.id
-
 }
 
 resource "google_compute_firewall" "allow_ssh" {
@@ -23,5 +21,4 @@ resource "google_compute_firewall" "allow_ssh" {
 
   source_ranges = ["0.0.0.0/0"]
   description   = "Allow SSH traffic"
-
 }
