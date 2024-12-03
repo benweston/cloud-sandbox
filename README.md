@@ -2,7 +2,7 @@
 
 # Cloud Sandbox
 
-> **TL;DR** Development environment for experimentation & testing.   
+> **TL;DR** Provisions a Google Cloud development environment for experimentation & testing.   
 
 ## Introduction
 
