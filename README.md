@@ -20,7 +20,7 @@ Cloud Sandbox provides a simple development environment running on [Google Cloud
 
 <div align="justify">
 
-For comprehensive documentation please head over to the [Wiki](https://github.com/benweston/cloud-sandbox/wiki).   
+Comprehensive site documentation, including an in-depth look at the architecture is currently under construction and may be found over on the [Wiki](https://github.com/benweston/cloud-sandbox/wiki).  Please continue to check the wiki for updates.   
 
 </div>
 
