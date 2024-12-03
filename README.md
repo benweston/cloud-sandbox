@@ -6,11 +6,11 @@
 
 ## Introduction
 
-Cloud Sandbox provides a simple CLI-based environment for provisioning [Google Cloud](https://cloud.google.com/?hl=en) infrastructure resources using [Terraform](https://www.terraform.io/).   
+Cloud Sandbox provides a simple development environment running on [Google Cloud](https://cloud.google.com/?hl=en) infrastructure.  It's primary purpose is to act as a testing ground for provisioning resources using [Terraform](https://www.terraform.io/).  Lessons learned here will then be used in upcoming production projects.   
 
 ## Documentation
 
-_Coming soon..._
+For comprehensive documentation please head over to the [Wiki](https://github.com/benweston/cloud-sandbox/wiki).   
 
 ## License
 
