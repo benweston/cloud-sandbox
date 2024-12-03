@@ -2,7 +2,7 @@
 
 # Cloud Sandbox
 
-> Development environment for experimentation & testing.   
+> **TL;DR** Development environment for experimentation & testing.   
 
 ## Introduction
 
