@@ -1,3 +1,3 @@
-# Storage Bucket
+# Storage Bucket Example
 
 _Coming Soon..._

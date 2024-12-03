@@ -1,3 +1,3 @@
-# VPC Network
+# VPC Network Example
 
 _Coming Soon..._
