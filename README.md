@@ -29,6 +29,7 @@ For comprehensive documentation please head over to the [Wiki](https://github.co
 <div align="justify">
 
 This repository is licensed under the MIT License. Below are specific licensing details for different elements in this project.   
+
 **Code License**   
 The code in this repository is provided under the [MIT License](https://github.com/benweston/cloud-sandbox/blob/main/LICENSE).  This permits free use, modification, and distribution, provided that the original license text and attribution are retained.  Each contributor agrees that their code submissions are provided under this license.   
 
