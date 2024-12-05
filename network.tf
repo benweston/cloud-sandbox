@@ -1,8 +1,9 @@
 resource "google_compute_network" "sandbox_vpc" {
   name                    = "demo-public-vpc"
   auto_create_subnetworks = false
-  project                 = var.project
+  project                 = var.project_id
   mtu                     = 1460
+  depends_on              = [google_project_service.compute]
 }
 
 resource "google_compute_subnetwork" "sandbox_subnet" {
