@@ -10,6 +10,12 @@ variable "region" {
   sensitive = true
 }
 
+variable "zone" {
+  type = string
+  description = "Default Google Cloud Zone."
+  sensitive = true
+}
+
 variable "project_name" {
   type = string
   description = "Project name."
