@@ -8,13 +8,13 @@ terraform {
 }
 
 provider "google" {
-  project = 
-  region = var.region
-  zone = var.zone
+  project = "${var.project_id_prefix}-${random_integer.project_suffix.result}"
+  region  = var.region
+  zone    = var.zone
 }
 
 resource "random_integer" "project_suffix" {
-  min = 000000
+  min = 100000
   max = 999999
 }
 
