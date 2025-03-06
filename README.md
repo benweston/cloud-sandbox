@@ -1,2 +1,3 @@
-# cloud-sandbox
-Development environment for experimentation &amp; testing.
+# Cloud Sandbox
+
+> Development environment for experimentation &amp; testing.
