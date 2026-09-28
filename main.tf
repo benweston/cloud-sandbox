@@ -14,7 +14,7 @@ provider "digitalocean" {
 }
 
 # ------------------------------------------------------------------------------
-# Variables & Dynamic Environment Resolution
+# Variables
 # ------------------------------------------------------------------------------
 variable "environment" {
   type        = string
@@ -31,6 +31,15 @@ variable "environment" {
   }
 }
 
+variable "region" {
+  type        = string
+  description = "DigitalOcean region slug."
+  default     = "lon1"
+}
+
+# ------------------------------------------------------------------------------
+# Dynamic Locals
+# ------------------------------------------------------------------------------
 locals {
   # Canonical DO environment list for tag creation
   environments = toset(["Development", "Staging", "Production"])
@@ -51,6 +60,13 @@ locals {
     var.environment,
     lookup(local.workspace_map, lower(terraform.workspace), "Development")
   )
+
+  # Non-overlapping private CIDR allocation per environment
+  vpc_cidrs = {
+    "Development" = "10.128.10.0/24"
+    "Staging"     = "10.128.20.0/24"
+    "Production"  = "10.128.30.0/24"
+  }
 }
 
 # ------------------------------------------------------------------------------
@@ -66,4 +82,11 @@ resource "digitalocean_project" "cloud_sandbox" {
   description = "Ephemeral cloud infrastructure and sandbox environments for experimentation and learning."
   purpose     = "Try it out / Concept or Prototype"
   environment = local.active_environment
+}
+
+resource "digitalocean_vpc" "sandbox_vpc" {
+  name        = "sandbox-vpc-${lower(local.active_environment)}"
+  region      = var.region
+  ip_range    = lookup(local.vpc_cidrs, local.active_environment, "10.128.10.0/24")
+  description = "Dedicated VPC for ${local.active_environment} sandbox resources"
 }
