@@ -1,0 +1,110 @@
+# ==============================================================================
+# Git Ignore Rules: cloud-sandbox
+# Base templates: linux, ssh, terraform, sublimetext, direnv, dotenv
+# ==============================================================================
+
+# ------------------------------------------------------------------------------
+# 1. Secrets, Credentials & Local Environment
+# ------------------------------------------------------------------------------
+# Environment configuration & direnv
+.direnv/
+.envrc
+.env
+*.env
+*.env.*
+!.env.example
+!.envrc.example
+
+# SSH keys & known hosts
+**/.ssh/id_*
+**/.ssh/*_id_*
+**/.ssh/known_hosts
+
+# Generic key pairs, certs & cloud credentials
+*.pem
+*.key
+*.pub
+id_rsa*
+id_ed25519*
+doctl/
+*.do_token
+
+# ------------------------------------------------------------------------------
+# 2. Infrastructure as Code (Terraform / OpenTofu)
+# ------------------------------------------------------------------------------
+# Local cache directories & plugins
+**/.terraform/*
+.terraformrc
+terraform.rc
+
+# State files & plan files
+*.tfstate
+*.tfstate.*
+*.tfplan
+*tfplan*
+
+# Variable definition files (exclude sensitive values)
+*.tfvars
+*.tfvars.json
+!*.tfvars.example
+
+# Local overrides
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+
+# Crash logs
+crash.log
+crash.*.log
+
+# ------------------------------------------------------------------------------
+# 3. Editor & IDE (Sublime Text)
+# ------------------------------------------------------------------------------
+# Cache files
+*.tmlanguage.cache
+*.tmPreferences.cache
+*.stTheme.cache
+bh_unicode_properties.cache
+
+# User-specific workspace configuration
+*.sublime-workspace
+
+# SFTP configuration
+sftp-config.json
+sftp-config-alt*.json
+
+# Package Control artifacts & token storage
+Package Control.last-run
+Package Control.ca-list
+Package Control.ca-bundle
+Package Control.system-ca-bundle
+Package Control.cache/
+Package Control.ca-certs/
+Package Control.merged-ca-bundle
+Package Control.user-ca-bundle
+oscrypto-ca-bundle.crt
+GitHub.sublime-settings
+
+# ------------------------------------------------------------------------------
+# 4. Operating System & Filesystem (Linux)
+# ------------------------------------------------------------------------------
+# Editor backups & temporary files
+*~
+.fuse_hidden*
+.nfs*
+
+# Desktop environment & trash directories
+.directory
+.Trash-*
+
+# ------------------------------------------------------------------------------
+# 5. Local Runtime, Logs & Temporary Files
+# ------------------------------------------------------------------------------
+tmp/
+temp/
+*.log
+*.tmp
+*.out
+*.retry
+*.pid
