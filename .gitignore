@@ -70,6 +70,9 @@ bh_unicode_properties.cache
 # User-specific workspace configuration
 *.sublime-workspace
 
+# User-specific project configuration
+*.sublime-project
+
 # SFTP configuration
 sftp-config.json
 sftp-config-alt*.json
