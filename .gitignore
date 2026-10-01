@@ -31,7 +31,36 @@ doctl/
 *.do_token
 
 # ------------------------------------------------------------------------------
-# 2. Editor & IDE (Sublime Text)
+# 2. Infrastructure as Code (Terraform / OpenTofu)
+# ------------------------------------------------------------------------------
+# Local cache directories & plugins
+**/.terraform/*
+.terraformrc
+terraform.rc
+
+# State files & plan files
+*.tfstate
+*.tfstate.*
+*.tfplan
+*tfplan*
+
+# Variable definition files (exclude sensitive values)
+*.tfvars
+*.tfvars.json
+!*.tfvars.example
+
+# Local overrides
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+
+# Crash logs
+crash.log
+crash.*.log
+
+# ------------------------------------------------------------------------------
+# 3. Editor & IDE (Sublime Text)
 # ------------------------------------------------------------------------------
 # Cache files
 *.tmlanguage.cache
@@ -62,7 +91,7 @@ oscrypto-ca-bundle.crt
 GitHub.sublime-settings
 
 # ------------------------------------------------------------------------------
-# 3. Operating System & Filesystem (Linux)
+# 4. Operating System & Filesystem (Linux)
 # ------------------------------------------------------------------------------
 # Editor backups & temporary files
 *~
@@ -74,7 +103,7 @@ GitHub.sublime-settings
 .Trash-*
 
 # ------------------------------------------------------------------------------
-# 4. Local Runtime, Logs & Temporary Files
+# 5. Local Runtime, Logs & Temporary Files
 # ------------------------------------------------------------------------------
 tmp/
 temp/
