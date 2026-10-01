@@ -1,5 +1,5 @@
 <a href="https://github.com/benweston/cloud-sandbox">
-    <img src="../assets/banners/main-banner.png" alt="Ben Weston - Cloud & Software Engineering" width="1100" height="150" loading="lazy" />
+    <img src="/assets/banners/main-banner.png" alt="Ben Weston - Cloud & Software Engineering" width="1100" height="150" loading="lazy" />
 </a>
 
 # `/misc`
