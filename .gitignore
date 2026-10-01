@@ -14,6 +14,7 @@
 *.env.*
 !.env.example
 !.envrc.example
+env-variables.txt
 
 # SSH keys & known hosts
 **/.ssh/id_*
